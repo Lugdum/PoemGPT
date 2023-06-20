@@ -1,12 +1,12 @@
-import { useState } from 'react';
-import '../styles/PoemForm.css';
+import { useState } from "react";
+import "../styles/PoemForm.css";
 
 const PoemForm = ({ onSubmit }) => {
-  const [language, setLanguage] = useState('');
-  const [length, setLength] = useState('');
+  const [language, setLanguage] = useState("");
+  const [length, setLength] = useState("");
   const [rhymes, setRhymes] = useState(false);
-  const [style, setStyle] = useState('');
-  const [theme, setTheme] = useState('');
+  const [style, setStyle] = useState("");
+  const [theme, setTheme] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -18,7 +18,10 @@ const PoemForm = ({ onSubmit }) => {
       <form onSubmit={handleSubmit}>
         <label className="input-field">
           Language:
-          <select value={language} onChange={(e) => setLanguage(e.target.value)}>
+          <select
+            value={language}
+            onChange={(e) => setLanguage(e.target.value)}
+          >
             <option value="English">English</option>
             <option value="French">French</option>
             <option value="Spanish">Spanish</option>
@@ -61,9 +64,7 @@ const PoemForm = ({ onSubmit }) => {
             required
           />
         </label>
-        <button type="submit">
-          Generate poem
-        </button>
+        <button type="submit">Generate poem</button>
       </form>
     </div>
   );
