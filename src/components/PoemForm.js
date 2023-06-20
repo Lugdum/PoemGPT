@@ -17,7 +17,7 @@ const PoemForm = ({ onSubmit }) => {
     <div>
       <form onSubmit={handleSubmit}>
         <label className="input-field">
-          Language:
+          Choose a language:
           <select
             value={language}
             onChange={(e) => setLanguage(e.target.value)}
@@ -30,7 +30,7 @@ const PoemForm = ({ onSubmit }) => {
           </select>
         </label>
         <label className="input-field">
-          Length:
+          Length of the rhymes:
           <input
             type="number"
             value={length}
@@ -39,7 +39,7 @@ const PoemForm = ({ onSubmit }) => {
           />
         </label>
         <label className="checkbox-field">
-          Rhymes:
+          Include rhymes:
           <input
             type="checkbox"
             checked={rhymes}
@@ -47,7 +47,7 @@ const PoemForm = ({ onSubmit }) => {
           />
         </label>
         <label className="input-field">
-          Style:
+          Style of the poem:
           <input
             type="text"
             value={style}
@@ -56,7 +56,7 @@ const PoemForm = ({ onSubmit }) => {
           />
         </label>
         <label className="input-field">
-          Theme:
+          Theme of the poem:
           <input
             type="text"
             value={theme}
